@@ -5,6 +5,7 @@ source_files:
     - de-ca-corpus/data/TED2020.ca-de.de
     - de-ca-corpus/data/TildeMODEL.de-es.de
     - de-ca-corpus/data/europarl.de-ca.de
+    - de-ca-corpus/data/covost_v2.ca-de.de
 #    - de-ca-corpus/data/Tatoeba.ca-de.de
 #    - de-ca-corpus/data/Ubuntu.ca-de.de
 
@@ -15,6 +16,7 @@ target_files:
     - de-ca-corpus/data/TED2020.ca-de.ca
     - de-ca-corpus/data/TildeMODEL.de-ca.ca
     - de-ca-corpus/data/europarl.de-ca.ca
+    - de-ca-corpus/data/covost_v2.ca-de.ca
 #    - de-ca-corpus/data/Tatoeba.ca-de.ca
 #    - de-ca-corpus/data/Ubuntu.ca-de.ca
 
