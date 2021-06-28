@@ -7,6 +7,7 @@ source_files:
     - raw/tedtalks.en-ca.en
     - raw/covost2.ca-en.en
     - raw/covost2.en-ca.en
+    - unpc-en.txt
 
 target_files:
     - preprocessed/tots-tm.ca
@@ -17,4 +18,4 @@ target_files:
     - raw/tedtalks.en-ca.ca
     - raw/covost2.ca-en.ca
     - raw/covost2.en-ca.ca
-
+    - unpc-ca.txt
