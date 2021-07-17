@@ -160,7 +160,7 @@ def main():
     datasets_fr_ca = \
         [\
             ['flores', 'input/flores101.{1}',
-                 'translated/flores-{2}-{1}.txt']
+                 'translated/flores-{0}-{2}-{1}.txt']
         ]
 
 
