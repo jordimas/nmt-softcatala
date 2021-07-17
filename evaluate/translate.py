@@ -26,10 +26,12 @@ import json
 import time
 from optparse import OptionParser
 
-def _translate_apertium_en_ca(text):
+def _translate_apertium(text, pair):
+
+    src_lang, tgt_lang = pair.split("-")
 
     # Request translation
-    url = "https://www.softcatala.org/apertium/json/translate?langpair=en|ca&markUnknown=no"
+    url = f"https://www.softcatala.org/apertium/json/translate?langpair={src_lang}|{tgt_lang}&markUnknown=no"
     url += "&q=" + urllib.parse.quote_plus(text.encode('utf-8'))
     #print("url->" + url)
 
@@ -93,17 +95,14 @@ def _translate_text_google(text, key, pair):
     return translated.rstrip()
 
 
-def apertium():
-    print("Translating using Apertium")
-    txt_en_file = 'input/globalvoices-en.txt'
-    txt_ca_file = 'translated/globalvoices-apertium-ca.txt'
+def apertium(source, target, pair):
 
     strings = 0
-    with open(txt_en_file, 'r') as tf_en, open(txt_ca_file, 'w') as tf_ca:
+    with open(source, 'r') as tf_en, open(target, 'w') as tf_ca:
         en_strings = tf_en.readlines()
     
         for string in en_strings:
-            translated = _translate_apertium_en_ca(string)
+            translated = _translate_apertium(string, pair)
             tf_ca.write("{0}\n".format(translated))
             strings = strings + 1
 
@@ -233,8 +232,8 @@ def main():
         yandex(source, target, key, pair)
     elif engine == 'google':
         google(source, target, key, pair)
-    elif apertium == 'apertium':
-        apertium(source, target, key, pair)
+    elif engine == 'apertium':
+        apertium(source, target, pair)
     else:
         print(f"Translation engine '{engine}' not supported")
 
