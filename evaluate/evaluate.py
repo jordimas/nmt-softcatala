@@ -163,11 +163,18 @@ def main():
                  'translated/flores-{0}-{2}-{1}.txt']
         ]
 
+    datasets_es_ca = \
+        [\
+            ['flores', 'input/flores101.{1}',
+                 'translated/flores-{0}-{2}-{1}.txt']
+        ]
+
 
 #    _evaluate(datasets_en_ca, "en", "ca", "English > Catalan")
 #    _evaluate(datasets_de_ca, "de", "ca", "German > Catalan")
 #    _evaluate(datasets_ca_de, "ca", "de", "Catalan > German")
-    _evaluate(datasets_fr_ca, "fr", "ca", "French > Catalan")
+#    _evaluate(datasets_fr_ca, "fr", "ca", "French > Catalan")
+    _evaluate(datasets_fr_ca, "es", "ca", "Spanish > Catalan")
 
 
 if __name__ == "__main__":

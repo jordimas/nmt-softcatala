@@ -107,9 +107,9 @@ def apertium(source, target, pair):
             tf_ca.write("{0}\n".format(translated))
             strings = strings + 1
 
-        if strings % 100:
-            print(strings)
-            time.sleep(60)
+#        if strings % 100:
+#            print(strings)
+#            time.sleep(5)
 
     print("Translated {0} strings".format(strings))
 
