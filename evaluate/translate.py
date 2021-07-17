@@ -83,7 +83,7 @@ def _translate_text_google(text, key, pair):
 
     src_lang, tgt_lang = pair.split("-")
 
-    url = "{0}/?key={1}&source=en&target=ca".format(SERVER, key)
+    url = f"{SERVER}/?key={key}&source={src_lang}&target={tgt_lang}"
     url += "&q=" + urllib.parse.quote_plus(text.encode('utf-8'))
     response = urllib.request.urlopen(url)
     r = response.read().decode("utf-8")
