@@ -92,6 +92,7 @@ def _translate_text_google(text, key, pair):
     data = json.loads(r)
     translated = data['data']['translations'][0]
     translated = translated['translatedText']
+    translated = translated.replace("&#39;", "'")
     return translated.rstrip()
 
 
