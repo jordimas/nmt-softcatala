@@ -108,7 +108,7 @@ def apertium(source, target, pair):
 
         if strings % 100:
             print(strings)
-            time.sleep(60*5*1000)
+            time.sleep(60)
 
     print("Translated {0} strings".format(strings))
 

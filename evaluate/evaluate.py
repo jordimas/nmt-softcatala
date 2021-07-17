@@ -29,11 +29,11 @@ def get_bleu(reference_file, hypotesis_file):
         return 0
 
     if not os.path.exists(reference_file):
-        #print(f"File '{reference_file}' not found")
+#        print(f"File '{reference_file}' not found")
         return 0
 
     if not os.path.exists(hypotesis_file):
-        #print(f"File '{hypotesis_file}' not found")
+#        print(f"File '{hypotesis_file}' not found")
         return 0
 
     cumulative_bleu_score = 0
@@ -157,9 +157,18 @@ def main():
         ]
 
 
-    _evaluate(datasets_en_ca, "en", "ca", "English > Catalan")
-    _evaluate(datasets_de_ca, "de", "ca", "German > Catalan")
-    _evaluate(datasets_ca_de, "ca", "de", "Catalan > German")
+    datasets_fr_ca = \
+        [\
+            ['flores', 'input/flores101.{1}',
+                 'translated/flores-{2}-{1}.txt']
+        ]
+
+
+#    _evaluate(datasets_en_ca, "en", "ca", "English > Catalan")
+#    _evaluate(datasets_de_ca, "de", "ca", "German > Catalan")
+#    _evaluate(datasets_ca_de, "ca", "de", "Catalan > German")
+    _evaluate(datasets_fr_ca, "fr", "ca", "French > Catalan")
+
 
 if __name__ == "__main__":
     main()
